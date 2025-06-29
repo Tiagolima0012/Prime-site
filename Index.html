@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prime Assessoria de Trânsito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #fff; }
+    header { background: linear-gradient(135deg, #004C99, #0077CC); color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
+    .banner { padding: 100px 20px; background: url('https://images.unsplash.com/photo-1583939484993-3c00150b3f1d') center/cover; color: white; text-align: center; }
+    .banner h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .banner p { font-size: 1.2rem; margin-bottom: 20px; }
+    .cta-button { padding: 12px 24px; background: #FFA500; color: #000; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    .section { padding: 50px 20px; max-width: 1100px; margin: auto; }
+    .section h2 { color: #004C99; margin-bottom: 20px; text-align: center; }
+    .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .card { flex: 1 1 240px; background: #f7f7f7; padding: 20px; border-left: 5px solid #FFA500; border-radius: 8px; transition: 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    footer { background: #00264d; color: white; padding: 20px; text-align: center; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; }
+      .cards { flex-direction: column; }
+      .banner h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div><strong>Prime</strong> Assessoria</div>
+      <div>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#cases">Resultados</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Sua CNH está em risco? Nós resolvemos.</h1>
+    <p>Assessoria especializada em defesas, recursos e habilitação profissional.</p>
+    <button class="cta-button" onclick="window.location.href='https://wa.me/5543996686197'">Fale pelo WhatsApp</button>
+  </section><!-- SOBRE -->
+  <section class="section" id="sobre">
+    <h2>Sobre a Prime</h2>
+    <p>Somos especialistas em trânsito há mais de 10 anos. Com uma equipe formada por profissionais capacitados, oferecemos soluções reais e eficazes para motoristas que precisam de suporte em situações complexas.</p>
+    <div class="cards">
+      <div class="card">👨‍⚖️ Equipe altamente qualificada</div>
+      <div class="card">📈 +1.200 CNHs recuperadas</div>
+      <div class="card">🌍 Atendimento em todo o Brasil</div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card">🛑 Defesa de Multas</div>
+      <div class="card">🚫 CNH Suspensa ou Cassada</div>
+      <div class="card">🚕 Regularização do EAR</div>
+      <div class="card">🔎 Consultoria Preventiva</div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="section" id="cases">
+    <h2>Resultados Reais</h2>
+    <p style="text-align:center;">Nossos números mostram nossa autoridade:</p>
+    <div class="cards">
+      <div class="card">✔️ 98,7% de êxito nos recursos</div>
+      <div class="card">💬 +3.500 atendimentos realizados</div>
+      <div class="card">⭐ Depoimentos com nota 5.0</div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section class="section" id="contato">
+    <h2>Fale com a Prime</h2>
+    <form action="https://formspree.io/f/meqynlwv" method="POST">
+      <label for="nome">Seu nome:</label><br />
+      <input type="text" name="nome" required /><br />
+
+      <label for="telefone">Seu telefone:</label><br />
+      <input type="text" name="telefone" required /><br />
+
+      <label for="mensagem">Como podemos te ajudar?</label><br />
+      <textarea name="mensagem" rows="4" required></textarea><br />
+
+      <button class="cta-button" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- CHATBOT SIMULADO -->
+  <section class="section">
+    <h2>Atendimento Virtual</h2>
+    <div style="background:#f0f0f0; border-radius:10px; padding:20px; max-width:500px; margin:auto;">
+      <p><strong>🤖 Bot:</strong> Olá! Como posso te ajudar hoje?</p>
+      <p><strong>👤 Você:</strong> Quero recuperar minha CNH</p>
+      <p><strong>🤖 Bot:</strong> Sua CNH está suspensa ou cassada?</p>
+      <p><strong>👤 Você:</strong> Suspensa</p>
+      <p><strong>🤖 Bot:</strong> Ótimo, podemos iniciar um recurso. Deseja atendimento via WhatsApp?</p>
+      <button onclick="window.location.href='https://wa.me/5543996686197'">Sim, quero atendimento</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Prime Assessoria de Trânsito – Atendimento via WhatsApp: (43) 99668-6197 – Email: primeassessoriatransito@gmail.com</p>
+  </footer>
+
+</body>
+</html>
+
+primeiro envio do site 
