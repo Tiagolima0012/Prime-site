@@ -9,7 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #fff; }
     header { background: linear-gradient(135deg, #004C99, #0077CC); color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
-    nav { display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
     .banner { padding: 100px 20px; background: url('https://images.unsplash.com/photo-1583939484993-3c00150b3f1d') center/cover; color: white; text-align: center; }
     .banner h1 { font-size: 2.5rem; margin-bottom: 10px; }
@@ -20,12 +20,12 @@
     .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .card { flex: 1 1 240px; background: #f7f7f7; padding: 20px; border-left: 5px solid #FFA500; border-radius: 8px; transition: 0.3s; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-    footer { background: #00264d; color: white; padding: 20px; text-align: center; }
-
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    footer { background: #00264d; color: white; padding: 20px; text-align: center; font-size: 0.9rem; }
     @media (max-width: 768px) {
-      nav { flex-direction: column; }
-      .cards { flex-direction: column; }
+      nav { flex-direction: column; text-align: center; }
       .banner h1 { font-size: 1.8rem; }
+      .card { flex: 1 1 100%; }
     }
   </style>
 </head>
@@ -47,7 +47,8 @@
     <h1>Sua CNH está em risco? Nós resolvemos.</h1>
     <p>Assessoria especializada em defesas, recursos e habilitação profissional.</p>
     <button class="cta-button" onclick="window.location.href='https://wa.me/5543996686197'">Fale pelo WhatsApp</button>
-  </section><!-- SOBRE -->
+  </section>
+
   <section class="section" id="sobre">
     <h2>Sobre a Prime</h2>
     <p>Somos especialistas em trânsito há mais de 10 anos. Com uma equipe formada por profissionais capacitados, oferecemos soluções reais e eficazes para motoristas que precisam de suporte em situações complexas.</p>
@@ -58,7 +59,6 @@
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
   <section class="section" id="servicos">
     <h2>Nossos Serviços</h2>
     <div class="cards">
@@ -69,7 +69,6 @@
     </div>
   </section>
 
-  <!-- RESULTADOS -->
   <section class="section" id="cases">
     <h2>Resultados Reais</h2>
     <p style="text-align:center;">Nossos números mostram nossa autoridade:</p>
@@ -80,24 +79,19 @@
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE CONTATO -->
   <section class="section" id="contato">
     <h2>Fale com a Prime</h2>
     <form action="https://formspree.io/f/meqynlwv" method="POST">
       <label for="nome">Seu nome:</label><br />
       <input type="text" name="nome" required /><br />
-
       <label for="telefone">Seu telefone:</label><br />
       <input type="text" name="telefone" required /><br />
-
       <label for="mensagem">Como podemos te ajudar?</label><br />
       <textarea name="mensagem" rows="4" required></textarea><br />
-
       <button class="cta-button" type="submit">Enviar</button>
     </form>
   </section>
 
-  <!-- CHATBOT SIMULADO -->
   <section class="section">
     <h2>Atendimento Virtual</h2>
     <div style="background:#f0f0f0; border-radius:10px; padding:20px; max-width:500px; margin:auto;">
@@ -106,7 +100,7 @@
       <p><strong>🤖 Bot:</strong> Sua CNH está suspensa ou cassada?</p>
       <p><strong>👤 Você:</strong> Suspensa</p>
       <p><strong>🤖 Bot:</strong> Ótimo, podemos iniciar um recurso. Deseja atendimento via WhatsApp?</p>
-      <button onclick="window.location.href='https://wa.me/5543996686197'">Sim, quero atendimento</button>
+      <button class="cta-button" onclick="window.location.href='https://wa.me/5543996686197'">Sim, quero atendimento</button>
     </div>
   </section>
 
@@ -116,5 +110,3 @@
 
 </body>
 </html>
-
-primeiro envio do site 
